@@ -43,10 +43,77 @@ header a, footer a {
   text-decoration: none;
   padding: 10px 20px;
   border-radius: 20px;
-  font-weight: 700;
+  font-weight: 500;
 
 }
 
 header a:hover, footer a:hover {
   background-color: var(--purple);
+}
+
+
+section:first-of-type h1{
+  font-size: 56px;
+  font-weight: 700;
+  
+}
+section:first-of-type p{
+  font-size: 18px;
+  font-weight: 500;
+  padding: 23px 0 80px 0;
+}
+
+section:first-of-type h1, p{
+  text-align: center;
+}
+
+.cards{
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(2, minmax(182px, auto));
+  gap: 10px;
+}
+
+.cards > * {
+  border-radius: 10px;
+  background-repeat: no-repeat;
+  background-position: top right;
+}
+.cards__graphic {
+  grid-column: span 4;
+  grid-row: 1/span 2; 
+  background-image: url('./assets/pattern-graphic-design.svg');
+  background-repeat: no-repeat;  
+  background-color: var(--purple);
+}
+
+.cards__ui {
+  grid-column: span 2;
+  background-image: url('./assets/pattern-ui-ux.svg');
+  background-color: var(--orange);
+}
+
+.cards__apps {
+  grid-column: span 2;
+  background-image: url('./assets/pattern-apps.svg');
+  background-color: var(--pink);
+
+}
+
+.cards__photography {
+  grid-column: span 4;
+  background-image: url('./assets/pattern-photography.svg');
+  background-color: var(--greenish);
+
+}
+
+.cards__illustrations {
+  grid-column: span 4;
+  background-image: url('./assets/pattern-illustrations.svg');
+  background-color: var(--pinker);
+}
+
+.cards__motion {
+  background-image: url('./assets/pattern-motion-graphics.svg');
+  background-color: var(--dark-purple);
 }
