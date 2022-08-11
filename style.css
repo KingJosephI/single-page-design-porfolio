@@ -71,13 +71,19 @@ section:first-of-type h1, p{
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   grid-template-rows: repeat(2, minmax(182px, auto));
-  gap: 10px;
+  gap: 25px;
+  color: var(--beige);
+  font-weight: 700;
 }
 
 .cards > * {
+  padding: 20px;
   border-radius: 10px;
   background-repeat: no-repeat;
-  background-position: top right;
+  background-position: top 20px right 20px;
+  display: flex;
+  align-items: flex-end;
+  
 }
 .cards__graphic {
   grid-column: span 4;
@@ -114,6 +120,7 @@ section:first-of-type h1, p{
 }
 
 .cards__motion {
+  grid-column: span 4;
   background-image: url('./assets/pattern-motion-graphics.svg');
   background-color: var(--dark-purple);
 }
