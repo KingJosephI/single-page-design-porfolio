@@ -24,6 +24,7 @@ body {
   background-color: var(--beige);
   font-family: 'Plus Jakarta Sans', sans-serif;
   font-size: 16px;
+  overflow-x: hidden;
 }
 
 header, footer {
@@ -37,14 +38,15 @@ header img, footer img {
   width: 64px;
 }
 
-header a, footer a {
+header a, footer a, section:last-of-type a {
   color: var(--beige);
   background-color: var(--blackish);
   text-decoration: none;
-  padding: 10px 20px;
-  border-radius: 20px;
   font-weight: 500;
-
+  max-width: 280px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 25px;
 }
 
 header a:hover, footer a:hover {
@@ -123,4 +125,109 @@ section:first-of-type h1, p{
   grid-column: span 4;
   background-image: url('./assets/pattern-motion-graphics.svg');
   background-color: var(--dark-purple);
+}
+
+
+section:nth-of-type(2){
+  display: flex;
+  margin: 100px 0;
+  align-items: center;
+  gap: 125px;
+}
+
+section:nth-of-type(2) img{
+  width: 445px
+}
+
+section:nth-of-type(2) > div{
+  min-height: 445px; 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 80px 0;
+  
+}
+
+section:nth-of-type(2) h1, section:nth-of-type(2) p{
+  text-align: left;
+}
+
+section:nth-of-type(2) h1{
+  font-size: 40px;
+  font-weight: 700;
+}
+
+section:nth-of-type(2) p{
+  line-height: 28px;
+}
+
+section:nth-of-type(2) a {
+  text-decoration: none;
+  color: var(--beige);
+  background-color: var(--pinker);
+  max-width: 280px;
+  text-align: center;
+  padding: 15px 20px;
+  border-radius: 25px;
+}
+
+section:nth-of-type(2) a:hover {
+  background-color: var(--orange);
+}
+
+section:nth-of-type(3) h1{
+  text-align: center;
+}
+
+section:nth-of-type(3) .slider {
+  display: flex;
+  padding: 60px 0;
+}
+
+section:nth-of-type(3) .slider img {
+  width: 540px;
+  height: 360px;
+}
+
+section:nth-of-type(3) .arrows {
+  text-align: center;
+}
+
+section:nth-of-type(3) .arrows > * {
+  background-color: #000;
+  padding: 20px;
+  border-radius: 50%;
+}
+
+section:nth-of-type(3) .arrows > *:hover {
+  background-color: var(--purple);
+  cursor: pointer;
+}
+
+section:last-of-type {
+  /* display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 3fr 1fr; */
+  display: flex;
+  /* flex-direction: column; */
+  padding: 30px;
+  background-color: var(--blackish);
+  border-radius: 15px;
+  min-height: 320px;
+  /* background-color: yellow; */
+}
+section:last-of-type > * {
+  /* display: flex; */
+  color: white;
+  /* display: flex;
+  flex-direction: column; */
+}
+
+section:last-of-type h1, section:last-of-type p {
+  text-align: left;
+
+}
+
+section:last-of-type a {
+  background-color: var(--orange);
 }
